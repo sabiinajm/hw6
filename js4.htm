@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tap() {
+            let arr2 = []
+            for (let i = 10; i <= 10000; i++) {
+                let reqemleri = i.toString().split('')
+                let reqemleriLength = reqemleri.length
+                let kod = 0
+
+                for (let j = 0; j < reqemleriLength; j++) {
+                    let reqem = Number(reqemleri[j])
+                    kod += Math.pow(reqem, reqemleriLength)
+                }
+
+                if (kod === i) {
+                    arr2.push(i)
+                }
+            }
+
+            console.log(arr2)
+        }
+
+        tap()
+    </script>
+</body>
+</html>

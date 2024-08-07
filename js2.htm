@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Reqemler: <span id="nums"></span></p>
+    <p>Sort methodu: <span id="sortm"></span></p>
+    <p>Ozumuz yazdigimiz funksiya: <span id="myFunk"></span></p>
+    <script>
+        const nums = document.getElementById('nums')
+        const sortm = document.getElementById('sortm')
+        const myFunk = document.getElementById('myFunk')
+        let arr = [1,5,8,7,-4,-3,2,3,6]
+        nums.innerText = arr
+        sortm.innerText = arr.sort(function(a, b){return a-b});
+        let x = 0
+        function sortArr(){
+            for (let i = 0; i<= arr.length; i++){
+                for (let j=0; j<=arr.length; j++){
+                    if (arr[i] < arr[j]){
+                        let ara = arr[i]
+                        arr[i] = arr[j]
+                        arr[j] = ara
+                    }
+                }
+            }
+            myFunk.innerText = arr
+        }
+        sortArr()
+    </script>
+</body>
+</html>
